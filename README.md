@@ -47,8 +47,6 @@ and then perform deployment with:
 serverless deploy
 ```
 
-T
-
 After running deploy, you should see output similar to:
 
 ```bash
@@ -88,6 +86,9 @@ layers:
   None
 ```
 
+### WAIT 
+![image](https://user-images.githubusercontent.com/17129958/126558157-04e623ac-002e-48c8-8d10-6836b74ccb45.png)
+The endpoint "https://xxxxxxx.execute-api.us-east-1.amazonaws.com/dev/" is the string to replace in triki-frontend in "src/App.js at line 6".
 _Note_: In current form, after deployment, your API is public and can be invoked by anyone. For production deployments, you might want to configure an authorizer. For details on how to do that, refer to [http event docs](https://www.serverless.com/framework/docs/providers/aws/events/apigateway/).
 
 ### Invocation
