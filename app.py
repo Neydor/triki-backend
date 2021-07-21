@@ -73,7 +73,7 @@ def checkWinner():
                         dynamodb_client.put_item(TableName=USERS_TABLE, Item={'userId': {'S': ganador}, 'name': {'S': item.get('name').get('S')},'victorias': {'N': str(victoryAc)}})
                     except:
                         return jsonify({"statusCode": 200,"headers": {'Access-Control-Allow-Origin': '*','Access-Control-Allow-Credentials': True,},"body": {'error':"no actualizo","ganador":ganador,"item":item}})
-                return jsonify({"statusCode": 200,"headers": {'Access-Control-Allow-Origin': '*','Access-Control-Allow-Credentials': True,},"body": {'winner':ganador,"victoryMove":victoryPosition[x],'next':False}})
+                return jsonify({"statusCode": 200,"headers": {'Access-Control-Allow-Origin': '*','Access-Control-Allow-Credentials': True,},"body": {'winner':newCells[v1],"victoryMove":victoryPosition[x],'next':False}})
             except Exception as inst:
                 return jsonify({"statusCode": 200,"headers": {'Access-Control-Allow-Origin': '*','Access-Control-Allow-Credentials': True,},"body": {'error':inst}})
                 
