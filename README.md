@@ -1,25 +1,16 @@
 <!--
-title: 'Serverless Framework Python Flask API backed by DynamoDB on AWS'
+title: 'Serverless Framework Python API backed by DynamoDB on AWS For Triki, Tic Tac Toe or tres en raya'
 description: 'This template demonstrates how to develop and deploy a simple Python Flask API service backed by DynamoDB running on AWS Lambda using the traditional Serverless Framework.'
-layout: Doc
-framework: v2
-platform: AWS
-language: Python
-authorLink: 'https://github.com/serverless'
-authorName: 'Serverless, inc.'
-authorAvatar: 'https://avatars1.githubusercontent.com/u/13742415?s=200&v=4'
 -->
 
 # Serverless Framework Python Flask API service backed by DynamoDB on AWS
 
 This template demonstrates how to develop and deploy a simple Python Flask API service, backed by DynamoDB, running on AWS Lambda using the traditional Serverless Framework.
-
+YOU NEED Triki-Frontend for complete APP Web. ====> https://github.com/Neydor/Triki-Frontend
 
 ## Anatomy of the template
 
-This template configures a single function, `api`, which is responsible for handling all incoming requests thanks to configured `http` events. To learn more about `http` event configuration options, please refer to [http event docs](https://www.serverless.com/framework/docs/providers/aws/events/apigateway/). As the events are configured in a way to accept all incoming requests, `Flask` framework is responsible for routing and handling requests internally. The implementation takes advantage of `serverless-wsgi`, which allows you to wrap WSGI applications such as Flask apps. To learn more about `serverless-wsgi`, please refer to corresponding [GitHub repository](https://github.com/logandk/serverless-wsgi). The template also relies on `serverless-python-requirements` plugin for packaging dependencies from `requirements.txt` file. For more details about `serverless-python-requirements` configuration, please refer to corresponding [GitHub repository](https://github.com/UnitedIncome/serverless-python-requirements).
-
-Additionally, the template also handles provisioning of a DynamoDB database that is used for storing data about users. The Flask application exposes two endpoints, `POST /users` and `GET /user/{userId}`, which allow to create and retrieve users.
+This template configures a single function, `api`, which is responsible for handling all incoming requests thanks to configured `http` events. 
 
 ## Usage
 
@@ -55,6 +46,8 @@ and then perform deployment with:
 ```
 serverless deploy
 ```
+
+T
 
 After running deploy, you should see output similar to:
 
@@ -187,7 +180,3 @@ At this point, you can run your application locally with the following command:
 ```bash
 serverless wsgi serve
 ```
-
-For additional local development capabilities of `serverless-wsgi` and `serverless-dynamodb-local` plugins, please refer to corresponding GitHub repositories:
-- https://github.com/logandk/serverless-wsgi 
-- https://github.com/99x/serverless-dynamodb-local
